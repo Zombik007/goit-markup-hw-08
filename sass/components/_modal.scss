@@ -1,0 +1,203 @@
+.modal {
+  &__caption {
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #212121;
+    margin-bottom: 12px;
+  }
+
+  &__input-caption {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #757575;
+    margin-bottom: 10px;
+  }
+
+  &__input-name {
+    margin-bottom: 4px;
+  }
+
+  &__input-field,
+  &__feedback {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 370px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    padding: 12px 42px;
+    border-radius: 4px;
+    transition-property: border;
+    transition-duration: $animation-duration;
+    transition-timing-function: $animation-type;
+  }
+
+  // &__field {
+  //   position: relative;
+  //   margin-bottom: 10px;
+  // }
+
+  &__input-field-box {
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    fill: #212121;
+    transition-property: fill;
+    transition-duration: $animation-duration;
+    transition-timing-function: $animation-type;
+  }
+
+  &__feedback {
+    height: 120px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    resize: none;
+  }
+
+  &__input-field:hover,
+  &__input-field:focus,
+  &__feedback:hover,
+  &__feedback:focus {
+    outline: none;
+    border: 1px solid #2196f3;
+  }
+
+  &__input-field:hover + &__img,
+  &__input-field:focus + &__img {
+    fill: $accent-color;
+  }
+
+  /* Стиль кнопки закрытия модального окна */
+  &__close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    text-align: center;
+    background-color: $color-white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+  }
+
+  /* Стиль иконки кнопки закрытия модального окна */
+  &__close-icon {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: currentColor;
+    transition-property: fill;
+    transition-duration: $animation-duration;
+    transition-timing-function: $animation-type;
+  }
+
+  &__close-button:hover &__close-icon,
+  &__close-button:focus &__close-icon {
+    fill: $accent-color;
+  }
+
+  &__checkbox {
+    position: relative;
+    font-size: 14px;
+    line-height: 24px;
+    color: #757575;
+    padding-bottom: 30px;
+    text-align: right;
+  }
+
+  &__checkbox-text {
+    position: relative;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.7em;
+    letter-spacing: 0.03em;
+    color: #757575;
+  }
+
+  &__checkbox-icon {
+    position: absolute;
+    width: 16px;
+    height: 15px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid #212121;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+    transition-property: color background-color box-shadow;
+    transition-duration: $animation-duration;
+    transition-timing-function: $animation-type;
+  }
+
+  &__checkbox-icon--unchecked {
+    background-color: none;
+    fill: #212121;
+  }
+
+  &__checkbox-input:not(:checked) ~ * &__checkbox-icon--checked {
+    background-color: none;
+    fill: none;
+  }
+  &__checkbox-input:checked ~ * &__checkbox-icon--checked {
+    background-color: $accent-color;
+    fill: $color-white;
+    border: 1px solid $accent-color;
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: $accent-color;
+    font-size: 12px;
+    line-height: 1.7em;
+    padding-bottom: 30px;
+  }
+
+  &__send-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 200px;
+    max-height: 50px;
+    font-size: 16px;
+    line-height: 1.875em;
+    letter-spacing: 0.06em;
+    text-align: center;
+    cursor: pointer;
+    background-color: $accent-color;
+    color: $color-white;
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 10px 56px;
+    transition-property: background-color;
+    transition-duration: $animation-duration;
+    transition-timing-function: $animation-type;
+  }
+
+  &__send-button:hover,
+  &__send-button:focus {
+    background-color: #188ce8;
+  }
+
+  @media (min-width: 1023px) {
+    &__input-field,
+    &__feedback {
+      width: 448px;
+    }
+  }
+}

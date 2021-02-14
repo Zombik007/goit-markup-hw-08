@@ -1,0 +1,118 @@
+/* Фон подвала */
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  // /* Выравнивание элементов подвала как Flex обьектов */
+  // &__align {
+  //   display: flex;
+  // }
+
+  // /* Выравнивание элементов логотипа как Flex обьектов */
+  // &__address {
+  //   display: inline-flex;
+  //   flex-direction: column;
+  // }
+
+  /* Общие стили текста подвала */
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71em;
+    font-style: normal;
+  }
+
+  &__item {
+    max-height: 21px;
+  }
+
+  // /* Задаются внешние отступы элементам списка в подвале сайта кроме последнего */
+  // &__list > &__item:not(:last-child) {
+  //   margin-bottom: 9px;
+  // }
+
+  /* Цвет адреса подвала */
+  &__text--color {
+    color: $color-white;
+  }
+
+  /* Цвет ссылки елктронной почты */
+  &__contacts--mail {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  /* Цвет ссылки телефона */
+  &__contacts--tel {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  /* Общие стили текста подвала */
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71em;
+    font-style: normal;
+  }
+
+  &__item {
+    max-height: 21px;
+  }
+
+  // /* Задаются внешние отступы элементам списка в подвале сайта кроме последнего */
+  // &__list > &__item:not(:last-child) {
+  //   margin-bottom: 9px;
+  // }
+
+  /* Цвет адреса подвала */
+  &__text--color {
+    color: $color-white;
+  }
+
+  /* Цвет ссылки елктронной почты */
+  &__contacts--mail {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  /* Цвет ссылки телефона */
+  &__contacts--tel {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  @media (min-width: 767px) {
+    & {
+      padding-left: 76px;
+      padding-right: 76px;
+    }
+    &__align {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  @media (min-width: 1023px) {
+    & {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__align {
+      display: flex;
+      justify-content: left;
+    }
+
+    &__container {
+      display: flex;
+    }
+  }
+}
+
+// /* Выравнивание элементов подвала как Flex обьектов */
+// &__align {
+//   display: flex;
+// }
+
+// /* Выравнивание элементов логотипа как Flex обьектов */
+// &__address {
+//   display: inline-flex;
+//   flex-direction: column;
+// }

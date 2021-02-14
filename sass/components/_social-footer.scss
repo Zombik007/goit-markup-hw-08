@@ -1,0 +1,57 @@
+// /* Задается блок ссылок социальных сетей как Flex обьект */
+// .social {
+//   display: inline-flex;
+//   flex-direction: column;
+//   margin-right: 93px;
+// }
+
+// /* Задается текст блока социальных сетей в подвале страницы */
+// .social__caption,
+// .subscribe__text {
+//   margin-bottom: 20px;
+//   font-weight: 700;
+//   font-size: 14px;
+//   line-height: 1.14em;
+//   text-transform: uppercase;
+//   color: $color-white;
+// }
+
+// /* Задается список ссылок социальных сетей как Flex обьект */
+// .social__list {
+//   display: flex;
+//   justify-content: center;
+// }
+
+// /* Внешний отступ ссылок социальных сетей подвала страницы */
+// .social__list > .social__item:not(:last-child) {
+//   margin-right: 10px;
+// }
+
+// /* Ссылки социальных сетей подвала страницы как Flex обьекты */
+// .social__link {
+//   display: inline-flex;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: rgba(255, 255, 255, 0.1);
+//   width: 44px;
+//   height: 44px;
+//   border-radius: 50%;
+//   color: #fff;
+//   transition-property: background-color color;
+//   transition-duration: $animation-duration;
+//   transition-timing-function: $animation-type;
+// }
+
+// /* Изменение цвета ссылок социальных сетей подвала страницы */
+// .social__link:hover,
+// .social__link:focus {
+//   background-color: $accent-color;
+//   color: #fff;
+// }
+
+// /* Задаются размеры ссылок социальных сетей подвала страницы */
+// .social__icon {
+//   width: 20px;
+//   height: 20px;
+//   fill: currentColor;
+// }

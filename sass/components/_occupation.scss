@@ -1,0 +1,46 @@
+/* Верхний внутрений отступ раздела "Чем мы занимаемся" */
+.occupation {
+  display: none;
+  padding-bottom: 94px;
+}
+
+// /* Задается свойство Flex элементам раздела "Чем мы занимаемся" */
+// .occupation__list {
+//   display: flex;
+// }
+
+/* Стили заголовка раздела "Чем мы занимаемся" */
+.occupation__caption {
+  font-size: 36px;
+  line-height: 1.17em;
+  text-align: center;
+  color: $text-caption-color;
+  margin-bottom: 50px;
+}
+
+/* Превращает элементы списка раздела "Чем мы занимаемся" в строчно-блочные */
+.occupation__item {
+  display: inline-block;
+  position: relative;
+  max-width: 370px;
+}
+
+/* Задаются отступы элементам списка раздела "Чем мы занимаемся" кроме последнего */
+.occupation__list > .occupation__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* Задаются стили текста раздела "Чем мы занимаемся" */
+.occupation__text {
+  position: absolute;
+  font-size: 14px;
+  line-height: 1.14em;
+  text-align: center;
+  text-transform: uppercase;
+  width: 370px;
+  height: 70px;
+  padding-top: 27px;
+  top: 224px;
+  background: rgba(47, 48, 58, 0.8);
+  color: $color-white;
+}

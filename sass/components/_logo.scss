@@ -1,0 +1,41 @@
+.logo {
+  font-family: $sec-font-family;
+  font-size: 24px;
+  line-height: 1.17em;
+  letter-spacing: 0.03em;
+}
+
+/* Общие стили для Logo */
+
+/* Цвет частички Web на Logo */
+.page-header__logo--blue,
+.footer__logo--blue {
+  color: $accent-color;
+}
+
+/* Цвет частички Studio на Logo */
+.page-header__logo--black {
+  margin-right: 88px;
+  color: #000;
+}
+
+/*  Внешний отступ блока логотипа от ссылок социальных сетей  */
+.footer__logo {
+  max-width: 154px;
+  margin-right: 70px;
+  margin-bottom: 20px;
+  text-align: center;
+  // margin-right: auto;
+  // margin-left: auto;
+}
+
+/* Стили логотипа подвала */
+.footer__logo--white {
+  color: $color-white;
+}
+
+@media (min-width: 1023px) {
+  .footer__logo {
+    text-align: left;
+  }
+}

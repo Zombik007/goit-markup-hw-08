@@ -1,0 +1,66 @@
+.social {
+  /* Задается свойство Flex элементам списка социальных сетей команды */
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Задаются отступы элементам списка социальных сетей команды кроме последнего */
+  &__list > &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  /* Придается вид элементам списка социальных сетей команды */
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #afb1b8;
+    transition-property: background-color color;
+    transition-duration: $animation-duration;
+    transition-timing-function: $animation-type;
+  }
+
+  /* Цвет иконок социальных сетей команды при наведении */
+  &__link:hover,
+  &__link:focus {
+    background-color: $accent-color;
+    color: $color-white;
+  }
+
+  /* Задаются размеры ссылок социальных сетей подвала страницы */
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+
+  &__icon--white {
+    fill: $color-white;
+  }
+
+  &__caption {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $color-white;
+    margin-bottom: 20px;
+  }
+
+  &__footer {
+    margin-bottom: 60px;
+
+    @media (min-width: 1023px) {
+      margin-bottom: 0;
+      margin-right: 93px;
+    }
+  }
+}

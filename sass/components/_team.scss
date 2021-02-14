@@ -1,0 +1,159 @@
+/* Задаются внутрение отступы и цвет фона карточек раздела "Наша команда" */
+.team {
+  background-color: #f5f4fa;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  // /* Задается свойство Flex элементам раздела "Наша команда" */
+  // .team__list {
+  //   display: flex;
+  // }
+
+  /* Стили заголовков раздела "Наша команда" */
+  &__caption {
+    font-size: 28px;
+    line-height: 1.18em;
+    text-align: center;
+    color: $text-caption-color;
+    margin-bottom: 30px;
+  }
+
+  /* Задается внутрений отступ, нижнее скругление и цвет фона карточек "Наша команда" */
+  &__item {
+    background-color: $color-white;
+    padding-bottom: 24px;
+    max-width: 450px;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  // /* Задаются отступы элементам списка раздела "Наша команда" кроме последнего */
+  // .team__list > .team__item:not(:last-child) {
+  //   margin-right: 30px;
+  // }
+
+  /* Нижний внешний отступ для изображения раздела "Наша команда"  */
+  &__img {
+    margin-bottom: 30px;
+  }
+
+  /* Стили заголовков карточек раздела "Наша команда" */
+  &__text-caption {
+    font-weight: 500;
+    font-size: 16px;
+    // line-height: 1.19em;
+    // text-align: center;
+    color: $text-caption-color;
+    margin-bottom: 10px;
+  }
+
+  /* Стили текста карточек раздела "Наша команда" */
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.17em;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  // /* Задается свойство Flex элементам списка социальных сетей команды */
+  // .team__social-list {
+  //   display: flex;
+  //   justify-content: center;
+  //   padding-top: 16px;
+  // }
+
+  // /* Задаются отступы элементам списка социальных сетей команды кроме последнего */
+  // .team__social-list > .team__social-item:not(:last-child) {
+  //   margin-right: 10px;
+  // }
+
+  // /* Придается вид элементам списка социальных сетей команды */
+  // .team__social-link {
+  //   display: inline-flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   background-color: rgba(255, 255, 255, 0.1);
+  //   width: 44px;
+  //   height: 44px;
+  //   border-radius: 50%;
+  //   color: #afb1b8;
+  //   transition-property: background-color color;
+  //   transition-duration: $animation-duration;
+  //   transition-timing-function: $animation-type;
+  // }
+
+  // /* Цвет иконок социальных сетей команды при наведении */
+  // .team__social-link:hover,
+  // .team__social-link:focus {
+  //   background-color: $accent-color;
+  //   color: $color-white;
+  // }
+
+  // /* Задаются размеры ссылок социальных сетей подвала страницы */
+  // .team__social-icon {
+  //   width: 20px;
+  //   height: 20px;
+  //   fill: currentColor;
+  // }
+
+  @media (min-width: 767px) {
+    &__list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 354px;
+      flex-basis: calc(100% / 3 - 10px);
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &__item:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+
+    &__item:nth-child(3) {
+      margin-bottom: 0;
+    }
+
+    &__img {
+      max-width: 354px;
+    }
+  }
+
+  @media (min-width: 1023px) {
+    &__list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
+
+    &__item {
+      width: 270px;
+      flex-basis: calc(100% / 4);
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+
+    // &__item:not(:nth-child(2n)) {
+    //   margin-right: 0;
+    // }
+
+    &__item:nth-child(3) {
+      margin-bottom: 0;
+    }
+
+    &__img {
+      max-width: 270px;
+    }
+  }
+}

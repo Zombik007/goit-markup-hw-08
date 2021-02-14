@@ -1,0 +1,69 @@
+.portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.filter {
+  /* Выравнивание кнопок по центру */
+  &__list {
+    margin-bottom: 40px;
+  }
+
+  /* Превращает элементы списка кнопок "Фильтры" в строчно-блочные для разменщения в одну линию */
+  &__item {
+    display: inline-block;
+  }
+
+  /* Задается внешний отступ справа элементам списка кнопок "Фильтры" кроме последнего */
+  &__list > &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  /* Стили кнопок фильтра */
+  &__button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.625em;
+    text-align: center;
+    color: $text-caption-color;
+    background-color: #f5f4fa;
+    min-height: 40px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding-top: 6px;
+    padding-left: 22px;
+    padding-bottom: 6px;
+    padding-right: 22px;
+    margin-bottom: 15px;
+    transition-property: color background-color box-shadow;
+    transition-duration: $animation-duration;
+    transition-timing-function: $animation-type;
+  }
+
+  /* Стили кнопок при наведении */
+  &__button:hover,
+  &__button:focus {
+    color: $color-white;
+    background-color: $accent-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  @media (min-width: 767px) {
+    &__list {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    &__button {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1023px) {
+    &__list {
+      margin-bottom: 50px;
+    }
+  }
+}
