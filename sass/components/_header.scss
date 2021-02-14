@@ -1,30 +1,112 @@
 /* Стиль нижней границы для хедера */
 .page-header {
-  padding: 16px 15px;
   border-bottom: 1px solid #ececec;
 
-  &__menu {
-    padding: 40px 48px;
+  &__container {
+    position: relative;
   }
 
-  // /* Задается свойство Flex контейнеру */
-  // & > &__container {
-  //   display: flex;
-  //   align-items: center;
-  // }
+  &__nav {
+    display: flex;
+    align-items: center;
+    max-height: 60px;
+  }
 
-  // /* Задается свойство Flex элементам шапки сайта */
-  // &__nav,
-  // &__list,
-  // &__contacts {
-  //   display: flex;
-  //   align-items: center;
-  // }
+  &__menu-btn {
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
 
-  // /* Задаются отступы ссылкам навигации всем эелементам кроме последнего */
-  // &__list > &__item:not(:last-child) {
-  //   margin-right: 50px;
-  // }
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    z-index: 2;
+
+    &:hover,
+    &:focus {
+      fill: $accent-color;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__menu-close {
+    display: none;
+  }
+
+  &__menu-btn.is-open &__menu_close {
+    display: block;
+  }
+  &__menu-btn.is-open &__menu_humburger {
+    display: none;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+
+      flex-direction: column;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 550px;
+      height: 100vh;
+
+      padding: 48px 40px;
+
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04),
+        0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+      background-color: $color-white;
+      z-index: 1;
+
+      &.is-open {
+        display: flex;
+      }
+
+      @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+      }
+
+      @media screen and (min-width: 768px) {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  &__list-pages {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      margin-right: 84px;
+
+      &__item {
+        margin-right: 50px;
+      }
+
+      &__item:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__item-pages {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 32px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   /* Цвет текста ссылок в шапке */
   &__link {
@@ -42,73 +124,155 @@
     transition-timing-function: $animation-type;
   }
 
-  &__item-pages:not(:last-child) {
-    margin-bottom: 32px;
-  }
-
-  &__item-pages:last-child {
-    margin-bottom: 302px;
-  }
-
-  &__item-tel {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 1.18em;
-    letter-spacing: 0.02em;
+  &__link--current {
     color: $accent-color;
-    margin-bottom: 32px;
+
+    @media screen and (min-width: 768px) {
+      &::after {
+        content: "";
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        display: block;
+        width: 100%;
+        height: 4px;
+
+        background-color: $accent-color;
+        border-radius: 2px;
+      }
+    }
   }
 
-  &__item-mail {
-    font-style: 400;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.17em;
-    letter-spacing: 0.02em;
-    color: $main-text-color;
-    margin-bottom: 64px;
+  .page-header__list-contacts {
+    padding: 0;
+
+    .page-header__item-contacts {
+      margin-right: 30px;
+    }
+
+    .page-header__item-contacts:last-child {
+      margin-right: 0;
+    }
+
+    .page-header__contacts-link {
+      display: flex;
+      align-items: center;
+
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14em;
+      letter-spacing: 0.02em;
+
+      color: #757575;
+      // transition: color $time-transition $function-bezire;
+
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-size: 12px;
+        line-height: 1.17em;
+      }
+    }
+
+    .page-header__contacts-link:hover,
+    .page-header__contacts-link:focus {
+      color: $accent-color;
+    }
+
+    .page-header__contacts--envelope {
+      display: none;
+
+      width: 16px;
+      height: 12px;
+      fill: currentColor;
+      margin-right: 10px;
+    }
+
+    .page-header__contacts--smartphone {
+      display: none;
+
+      width: 10px;
+      height: 16px;
+      fill: currentColor;
+      margin-right: 10px;
+    }
+
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column-reverse;
+
+      margin-bottom: 64px;
+
+      .page-header__contacts-link {
+        font-size: 24px;
+        line-height: 1.17em;
+      }
+
+      .page-header__item-contacts:last-child .page-header__contacts-link {
+        margin-bottom: 32px;
+
+        font-size: 34px;
+        line-height: 1.18;
+
+        color: $accent-color;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-left: auto;
+
+      .page-header__contacts--envelope,
+      .page-header__contacts--smartphone {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 1199px) {
+      .page-header__item-contacts:first-child {
+        margin-bottom: 10px;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+
+      .page-header__contacts-link {
+        padding: 32px 0;
+      }
+    }
   }
 
-  &__item-social {
-    display: inline-block;
-    font-style: 400;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.22em;
-    letter-spacing: 0.02em;
-    color: $accent-color;
+  .page-header__list-social {
+    display: flex;
+
+    .page-header__item-social {
+      padding: 0 10px;
+    }
+
+    .page-header__item-social:not(:first-child) {
+      border-left: 1px solid rgba(33, 33, 33, 0.2);
+    }
+
+    .page-header__item-social:first-child {
+      padding-left: 0;
+    }
+
+    .page-header__item-social:last-child {
+      padding-right: 0;
+    }
+
+    .page-header__link-social {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.22;
+      letter-spacing: 0.02em;
+      color: $accent-color;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
   }
-
-  &__item-social:not(:last-child) {
-    padding-right: 9px;
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
-  }
-
-  &__item-social:not(:first-child) {
-    padding-left: 3px;
-  }
-  // &__link::after {
-  //   content: "";
-
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 0;
-  //   display: block;
-  //   width: 100%;
-  //   height: 4px;
-  //   border-radius: 2px;
-  //   background-color: $accent-color;
-  //   opacity: 0;
-  //   transition-property: opacity;
-  //   transition-duration: $animation-duration;
-  //   transition-timing-function: $animation-type;
-  // }
-
-  // &__link--current&__link::after,
-  // &__link:hover::after {
-  //   opacity: 1;
-  // }
 
   /* Стили оттображения текущего элемента */
   &__link--current {
@@ -125,50 +289,6 @@
   &__contacts--smartphone {
     display: none;
   }
-  // /* Цвет текста и иконок контактов в шапке при наведении */
-  // &__contacts--mail:hover,
-  // &__contacts--mail:focus,
-  // &__contacts--tel:hover,
-  // &__contacts--tel:focus,
-  // &__contacts--icon:hover,
-  // &__contacts--icon:focus {
-  //   color: $accent-color;
-  // }
-
-  // /* Автоматический отступ слева для эелементов "Контакты" */
-  // &__contacts {
-  //   margin-left: auto;
-  // }
-
-  // /* Задается свойство Flex элементам "e-mail" и телефон */
-  // &__contacts--mail,
-  // &__contacts--tel {
-  //   display: flex;
-  //   align-items: center;
-  // }
-
-  // /* Отступ справа для элемента "e-mail" */
-  // &__contacts--mail {
-  //   margin-right: 50px;
-  // }
-
-  // /* Задаются отступы и цвет иконок элементов "e-mail" и телефон */
-  // &__contacts--icon {
-  //   margin-right: 10px;
-  //   fill: currentColor;
-  // }
-
-  // /* Задаются размеры иконки элемента "e-mail" */
-  // &__contacts--envelope {
-  //   width: 16px;
-  //   height: 12px;
-  // }
-
-  // /* Задаются размеры иконки элемента телефон */
-  // &__contacts--smartphone {
-  //   width: 10px;
-  //   height: 16px;
-  // }
 }
 
 // Media for tablets
@@ -220,11 +340,12 @@
       margin-bottom: 0;
     }
 
-    &__btn-close {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+    // &__btn-close {
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: space-between;
+    // }
+
     &__link {
       font-size: 14px;
       line-height: 1.14em;
@@ -376,11 +497,6 @@
       margin-bottom: 0;
     }
 
-    &__btn-close {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
     &__link {
       font-size: 14px;
       line-height: 1.14em;

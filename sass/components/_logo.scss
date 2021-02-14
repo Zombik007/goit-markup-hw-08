@@ -21,8 +21,6 @@
 
 /*  Внешний отступ блока логотипа от ссылок социальных сетей  */
 .footer__logo {
-  max-width: 154px;
-  margin-right: 70px;
   margin-bottom: 20px;
   text-align: center;
   // margin-right: auto;
@@ -37,5 +35,11 @@
 @media (min-width: 1023px) {
   .footer__logo {
     text-align: left;
+  }
+}
+
+@media (min-width: 767px) {
+  footer__logo-address {
+    margin-right: 165px;
   }
 }

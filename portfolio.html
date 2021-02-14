@@ -1,290 +1,648 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoIt first homework</title>
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
 
-<head>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>GoIt first homework</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css"
-      integrity="sha512-Zx6MlUMKSVJoQ+83OwhdILe8cSEsCzfqThJd7J/VA2UrK6Ctj85p+xzqfyuNXE5B1k25uUdmJ2OzItbBy9GHAQ=="
-      crossorigin="anonymous" />
-   <link rel="preconnect" href="https://fonts.gstatic.com" />
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" />
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" />
-   <link rel="stylesheet" href="./css/main.min.css" />
-</head>
-
-<body>
-   <!-- Шапка сайта -->
-   <header class="page-header">
+  <body>
+    <!-- Шапка сайта -->
+    <header class="page-header">
       <div class="container page-header__container">
-         <div class="logo">
+        <nav class="page-header__nav">
+          <div class="logo">
             <a href="./index.html" class="logo__link">
-               <span class="page-header__logo--blue">Web</span><span class="page-header__logo--black">Studio</span>
+              <span class="page-header__logo--blue">Web</span
+              ><span class="page-header__logo--black">Studio</span>
             </a>
-         </div>
-         <div class="page-header__menu">
-            <div class="page-header__btn-close">
-               <ul class="page-hader__list">
-                  <li class="page-header__item-pages"><a href="./index.html"
-                        class="page-header__link">Студия</a></li>
-                  <li class="page-header__item-pages"><a href="./portfolio.html" class="page-header__link page-header__link--current">Портфолио</a>
-                  </li>
-                  <li class="page-header__item-pages"><a href="#" class="page-header__link">Контакты</a></li>
-               </ul>
-               <ul class="page-header__list-contacts">
-                  <li class="page-header__item-tel"><a class="page-header__contacts--tel" href="tel:+380961111111">
-                        <svg class="page-header__contacts--smartphone page-header__contacts--icon">
-                           <use href="./icons/symbol-defs.svg#icon-smartphone"></use>
-                        </svg>+38 099 111 11 11</a></li>
-                  <li class="page-header__item-mail"><a class="page-header__contacts--mail"
-                        href="mailto:info@devstudio.com">
-                        <svg class="page-header__contacts--envelope page-header__contacts--icon">
-                           <use href="./icons/symbol-defs.svg#icon-envelope"></use>
-                        </svg>info@devstudio.com</a></li>
-               </ul>
-               <ul class="page-header__list">
-                  <li class="page-header__item-social">Instagram</li>
-                  <li class="page-header__item-social">Twitter</li>
-                  <li class="page-header__item-social">Facebook</li>
-                  <li class="page-header__item-social">LinkedIn</li>
-               </ul>
-            </div>
-         </div>
+          </div>
+          <button
+            class="page-header__menu-btn"
+            type="button"
+            aria-expanded="false"
+            aria-controls="page-header__menu"
+            data-menu-button
+          >
+            <svg width="40px" height="40px">
+              <use
+                class="page-header__menu-close"
+                href="./icons/symbol-defs.svg#icon-close-menu"
+              ></use>
+              <use
+                class="page-header__menu-humburger"
+                href="./icons/symbol-defs.svg#icon-humburger-menu"
+              ></use>
+            </svg>
+          </button>
+
+          <div class="page-header__menu" id="page-header__menu" data-menu>
+            <!-- <div class="page-header__btn-close"> -->
+            <ul class="page-hader__list-pages">
+              <li class="page-header__item-pages">
+                <a
+                  href="./index.html"
+                  class="page-header__link page-header__link--current"
+                  >Студия</a
+                >
+              </li>
+              <li class="page-header__item-pages">
+                <a href="./portfolio.html" class="page-header__link"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="page-header__item-pages">
+                <a href="#" class="page-header__link">Контакты</a>
+              </li>
+            </ul>
+            <ul class="page-header__list-contacts">
+              <li class="page-header__item-contacts">
+                <a
+                  class="page-header__contacts-link page-header__contacts--tel"
+                  href="tel:+380961111111"
+                >
+                  <svg
+                    class="page-header__contacts--smartphone page-header__contacts--icon"
+                  >
+                    <use
+                      href="./icons/symbol-defs.svg#icon-smartphone"
+                    ></use></svg
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="page-header__item-contacts">
+                <a
+                  class="page-header__contacts-link page-header__contacts--mail"
+                  href="mailto:info@devstudio.com"
+                >
+                  <svg
+                    class="page-header__contacts--envelope page-header__contacts--icon"
+                  >
+                    <use
+                      href="./icons/symbol-defs.svg#icon-envelope"
+                    ></use></svg
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="page-header__list-social">
+              <li class="page-header__item-social">
+                <a
+                  href=""
+                  class="page-header__link-social"
+                  aria-label="instagram"
+                  >Instagram</a
+                >
+              </li>
+              <li class="page-header__item-social">
+                <a href="" class="page-header__link-social" aria-label="twitter"
+                  >Twitter</a
+                >
+              </li>
+              <li class="page-header__item-social">
+                <a
+                  href=""
+                  class="page-header__link-social"
+                  aria-label="facebook"
+                  >Facebook</a
+                >
+              </li>
+              <li class="page-header__item-social">
+                <a
+                  href=""
+                  class="page-header__link-social"
+                  aria-label="linkedin"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+            <!-- </div> -->
+          </div>
+        </nav>
       </div>
-   </header>
-   <!-- /Шапка сайта -->
+    </header>
+    <!-- /Шапка сайта -->
 
-   <!-- Главниый раздел -->
-   <main class="portfolio">
+    <!-- Главниый раздел -->
+    <main class="portfolio">
+      <!-- Кнопки "Фильтры" -->
+      <section class="filter">
+        <div class="container">
+          <h1 class="visually-hidden">Наше портфлио</h1>
+          <h2 class="visually-hidden">Фильтр проектов</h2>
+          <ul class="filter__list">
+            <li class="filter__item">
+              <button class="filter__button" type="button">Все</button>
+            </li>
+            <li class="filter__item">
+              <button class="filter__button" type="button">Веб-сайты</button>
+            </li>
+            <li class="filter__item">
+              <button class="filter__button" type="button">Приложения</button>
+            </li>
+            <li class="filter__item">
+              <button class="filter__button" type="button">Дизайн</button>
+            </li>
+            <li class="filter__item">
+              <button class="filter__button" type="button">Маркетинг</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- /Кнопки "Фильтры" -->
 
-   <!-- Кнопки "Фильтры" -->
-   <section class="filter">
-      <div class="container">
-         <h1 class="visually-hidden">Наше портфлио</h1>
-         <h2 class="visually-hidden">Фильтр проектов</h2>
-         <ul class="filter__list">
-            <li class="filter__item">
-               <button class="filter__button" type="button">Все</button>
+      <!-- Карточки "Проекты"-->
+      <section class="projects">
+        <div class="container">
+          <h2 class="visually-hidden">Наши проекты</h2>
+          <ul class="projects__list">
+            <li class="projects__item" tabindex="0">
+              <div class="projects__img">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/examples/tehnokryak-mobile.jpg,
+                      ./images/examples/tehnokryak-mobile@2x.jpg
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/examples/tehnokryak-tablet.jpg,
+                      ./images/examples/tehnokryak-tablet@2x.jpg
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/examples/tehnokryak.jpg,
+                      ./images/examples/tehnokryak@2x.jpg
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="projects__photo"
+                    src="./images/examples/tehnokryak-mobile.jpg"
+                    alt="Изображение открытого ноутбука"
+                  />
+                </picture>
+                <div class="projects__overlay">
+                  <p class="projects__overlay-text">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
+              </div>
+              <div class="projects__block">
+                <h2 class="projects__caption">Технокряк</h2>
+                <p class="projects__text">Веб-сайт</p>
+              </div>
             </li>
-            <li class="filter__item">
-               <button class="filter__button" type="button">Веб-сайты</button>
+            <li class="projects__item" tabindex="0">
+              <div class="projects__img">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/examples/New-Orlean-vs-Golden-Star-mobile.jpg,
+                      ./images/examples/New-Orlean-vs-Golden-Star-mobile@2x.jpg
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/examples/New-Orlean-vs-Golden-Star-tablet.jpg,
+                      ./images/examples/New-Orlean-vs-Golden-Star-tablet@2x.jpg
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/examples/New-Orlean-vs-Golden-Star.jpg,
+                      ./images/examples/New-Orlean-vs-Golden-Star@2x.jpg
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="projects__photo"
+                    src="./images/examples/New-Orlean-vs-Golden-Star-mobile.jpg"
+                    alt="Изображение двух баскетболистов"
+                  />
+                </picture>
+                <div class="projects__overlay">
+                  <p class="projects__overlay-text">
+                    New Orlean vs Golden Star это современная площадка
+                    распространения коронавируса. Компании используют эту
+                    платформу для цифрового шпионажа и атак на защищённые
+                    сервера конкурентов.
+                  </p>
+                </div>
+              </div>
+              <div class="projects__block">
+                <h2 class="projects__caption">
+                  Постер New Orlean vs Golden Star
+                </h2>
+                <p class="projects__text">Дизайн</p>
+              </div>
             </li>
-            <li class="filter__item">
-               <button class="filter__button" type="button">Приложения</button>
+            <li class="projects__item" tabindex="0">
+              <div class="projects__img">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/examples/Ресторан-Seafood-mobile.jpg,
+                      ./images/examples/Ресторан-Seafood-mobile@2x.jpg
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/examples/Ресторан-Seafood-tablet.jpg,
+                      ./images/examples/Ресторан-Seafood-tablet@2x.jpg
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/examples/Ресторан-Seafood.jpg,
+                      ./images/examples/Ресторан-Seafood@2x.jpg
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="projects__photo"
+                    src="./images/examples/Ресторан-Seafood-mobile.jpg"
+                    alt="Логотип ресторана"
+                  />
+                </picture>
+                <div class="projects__overlay">
+                  <p class="projects__overlay-text">
+                    Seafood это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
+              </div>
+              <div class="projects__block">
+                <h2 class="projects__caption">Ресторан Seafood</h2>
+                <p class="projects__text">Приложение</p>
+              </div>
             </li>
-            <li class="filter__item">
-               <button class="filter__button" type="button">Дизайн</button>
+            <li class="projects__item" tabindex="0">
+              <div class="projects__img">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/examples/Проект-Prime-mobile.jpg,
+                      ./images/examples/Проект-Prime-mobile@2x.jpg
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/examples/Проект-Prime-tablet.jpg,
+                      ./images/examples/Проект-Prime-tablet@2x.jpg
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/examples/Проект-Prime.jpg,
+                      ./images/examples/Проект-Prime@2x.jpg
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="projects__photo"
+                    src="./images/examples/Проект-Prime-mobile.jpg"
+                    alt="Изображение наушников"
+                  />
+                </picture>
+                <div class="projects__overlay">
+                  <p class="projects__overlay-text">
+                    Prime это современная площадка распространения коронавируса.
+                    Компании используют эту платформу для цифрового шпионажа и
+                    атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
+              </div>
+              <div class="projects__block">
+                <h2 class="projects__caption">Проект Prime</h2>
+                <p class="projects__text">Маркетинг</p>
+              </div>
             </li>
-            <li class="filter__item">
-               <button class="filter__button" type="button">Маркетинг</button>
+            <li class="projects__item" tabindex="0">
+              <div class="projects__img">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/examples/Проект-Boxes-mobile.jpg,
+                      ./images/examples/Проект-Boxes-mobile@2x.jpg
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/examples/Проект-Boxes-tablet.jpg,
+                      ./images/examples/Проект-Boxes-tablet@2x.jpg
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/examples/Проект-Boxes.jpg,
+                      ./images/examples/Проект-Boxes@2x.jpg
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="projects__photo"
+                    src="./images/examples/Проект-Boxes-mobile.jpg"
+                    alt="Изображение двух коробок"
+                  />
+                </picture>
+                <div class="projects__overlay">
+                  <p class="projects__overlay-text">
+                    Boxes это современная площадка распространения коронавируса.
+                    Компании используют эту платформу для цифрового шпионажа и
+                    атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
+              </div>
+              <div class="projects__block">
+                <h2 class="projects__caption">Проект Boxes</h2>
+                <p class="projects__text">Приложение</p>
+              </div>
             </li>
-         </ul>
-      </div>
-   </section>
-   <!-- /Кнопки "Фильтры" -->
+            <li class="projects__item" tabindex="0">
+              <div class="projects__img">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/examples/Inspiration-has-no-Borders-mobile.jpg,
+                      ./images/examples/Inspiration-has-no-Borders-mobile@2x.jpg
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/examples/Inspiration-has-no-Borders-tablet.jpg,
+                      ./images/examples/Inspiration-has-no-Borders-tablet@2x.jpg
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/examples/Inspiration-has-no-Borders.jpg,
+                      ./images/examples/Inspiration-has-no-Borders@2x.jpg
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="projects__photo"
+                    src="./images/examples/Inspiration-has-no-Borders-mobile.jpg"
+                    alt="Изображение монитора"
+                  />
+                </picture>
+                <div class="projects__overlay">
+                  <p class="projects__overlay-text">
+                    Inspiration has no Borders это современная площадка
+                    распространения коронавируса. Компании используют эту
+                    платформу для цифрового шпионажа и атак на защищённые
+                    сервера конкурентов.
+                  </p>
+                </div>
+              </div>
+              <div class="projects__block">
+                <h2 class="projects__caption">Inspiration has no Borders</h2>
+                <p class="projects__text">Веб-сайт</p>
+              </div>
+            </li>
+            <li class="projects__item" tabindex="0">
+              <div class="projects__img">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/examples/Издание-Limited-Edition-mobile.jpg,
+                      ./images/examples/Издание-Limited-Edition-mobile@2x.jpg
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/examples/Издание-Limited-Edition-tablet.jpg,
+                      ./images/examples/Издание-Limited-Edition-tablet@2x.jpg
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/examples/Издание-Limited-Edition.jpg,
+                      ./images/examples/Издание-Limited-Edition@2x.jpg
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="projects__photo"
+                    src="./images/examples/Издание-Limited-Edition-mobile.jpg"
+                    alt="Изображение открытой книги"
+                  />
+                </picture>
+                <div class="projects__overlay">
+                  <p class="projects__overlay-text">
+                    Limited Edition это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
+              </div>
+              <div class="projects__block">
+                <h2 class="projects__caption">Издание Limited Edition</h2>
+                <p class="projects__text">Дизайн</p>
+              </div>
+            </li>
+            <li class="projects__item" tabindex="0">
+              <div class="projects__img">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/examples/Проект-LAB-mobile.jpg,
+                      ./images/examples/Проект-LAB-mobile@2x.jpg
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/examples/Проект-LAB-tablet.jpg,
+                      ./images/examples/Проект-LAB-tablet@2x.jpg
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/examples/Проект-LAB.jpg,
+                      ./images/examples/Проект-LAB@2x.jpg
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="projects__photo"
+                    src="./images/examples/Проект-LAB-mobile.jpg"
+                    alt="Изображение бирки с названием"
+                  />
+                </picture>
+                <div class="projects__overlay">
+                  <p class="projects__overlay-text">
+                    LAB это современная площадка распространения коронавируса.
+                    Компании используют эту платформу для цифрового шпионажа и
+                    атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
+              </div>
+              <div class="projects__block">
+                <h2 class="projects__caption">Проект LAB</h2>
+                <p class="projects__text">Маркетинг</p>
+              </div>
+            </li>
+            <li class="projects__item" tabindex="0">
+              <div class="projects__img">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/examples/Growing-Business-mobile.jpg,
+                      ./images/examples/Growing-Business-mobile@2x.jpg
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/examples/Growing-Business-tablet.jpg,
+                      ./images/examples/Growing-Business-tablet@2x.jpg
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/examples/Growing-Business.jpg,
+                      ./images/examples/Growing-Business@2x.jpg
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="projects__photo"
+                    src="./images/examples/Growing-Business-mobile.jpg"
+                    alt="Изображение ноутбука на котором работают"
+                  />
+                </picture>
+                <div class="projects__overlay">
+                  <p class="projects__overlay-text">
+                    Growing Business это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
+              </div>
+              <div class="projects__block">
+                <h2 class="projects__caption">Growing Business</h2>
+                <p class="projects__text">Приложение</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- /Каточки "Проекты"-->
+    </main>
+    <!-- /Главниый раздел -->
 
-   <!-- Карточки "Проекты"-->
-   <section class="projects">
-      <div class="container">
-         <h2 class="visually-hidden">Наши проекты</h2>
-         <ul class="projects__list">
-            <li class="projects__item" tabindex="0">
-               <div class="projects__img">
-                  <img class="projects__photo" src="./images/imgportfolio1.jpg" alt="" />
-                  <div class="projects__overlay">
-                     <p class="projects__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
-                     </p>
-                  </div>
-               </div>
-               <div class="projects__block">
-                  <h2 class="projects__caption">Технокряк</h2>
-                  <p class="projects__text">Веб-сайт</p>
-               </div>
-            </li>
-            <li class="projects__item" tabindex="0">
-               <div class="projects__img"><img class="projects__photo" src="./images/imgportfolio2.jpg" alt="" />
-                  <div class="projects__overlay">
-                     <p class="projects__overlay-text">New Orlean vs Golden Star это современная площадка распространения
-                        коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера
-                        конкурентов.</p>
-                  </div>
-               </div>
-               <div class="projects__block">
-                  <h2 class="projects__caption">Постер New Orlean vs Golden Star</h2>
-                  <p class="projects__text">Дизайн</p>
-               </div>
-            </li>
-            <li class="projects__item" tabindex="0">
-               <div class="projects__img"><img class="projects__photo" src="./images/imgportfolio3.jpg" alt="" />
-                  <div class="projects__overlay">
-                     <p class="projects__overlay-text">Seafood это современная площадка распространения коронавируса.
-                        Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
-                     </p>
-                  </div>
-               </div>
-               <div class="projects__block">
-                  <h2 class="projects__caption">Ресторан Seafood</h2>
-                  <p class="projects__text">Приложение</p>
-               </div>
-            </li>
-            <li class="projects__item" tabindex="0">
-               <div class="projects__img"><img class="projects__photo" src="./images/imgportfolio4.jpg" alt="" />
-                  <div class="projects__overlay">
-                     <p class="projects__overlay-text">Prime это современная площадка распространения коронавируса.
-                        Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
-                     </p>
-                  </div>
-               </div>
-               <div class="projects__block">
-                  <h2 class="projects__caption">Проект Prime</h2>
-                  <p class="projects__text">Маркетинг</p>
-               </div>
-            </li>
-            <li class="projects__item" tabindex="0">
-               <div class="projects__img"><img class="projects__photo" src="./images/imgportfolio5.jpg" alt="" />
-                  <div class="projects__overlay">
-                     <p class="projects__overlay-text">Boxes это современная площадка распространения коронавируса.
-                        Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
-                     </p>
-                  </div>
-               </div>
-               <div class="projects__block">
-                  <h2 class="projects__caption">Проект Boxes</h2>
-                  <p class="projects__text">Приложение</p>
-               </div>
-            </li>
-            <li class="projects__item" tabindex="0">
-               <div class="projects__img"><img class="projects__photo" src="./images/imgportfolio6.jpg" alt="" />
-                  <div class="projects__overlay">
-                     <p class="projects__overlay-text">Inspiration has no Borders это современная площадка распространения
-                        коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера
-                        конкурентов.</p>
-                  </div>
-               </div>
-               <div class="projects__block">
-                  <h2 class="projects__caption">Inspiration has no Borders</h2>
-                  <p class="projects__text">Веб-сайт</p>
-               </div>
-            </li>
-            <li class="projects__item" tabindex="0">
-               <div class="projects__img"><img class="projects__photo" src="./images/imgportfolio7.jpg" alt="" />
-                  <div class="projects__overlay">
-                     <p class="projects__overlay-text">Limited Edition это современная площадка распространения
-                        коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера
-                        конкурентов.</p>
-                  </div>
-               </div>
-               <div class="projects__block">
-                  <h2 class="projects__caption">Издание Limited Edition</h2>
-                  <p class="projects__text">Дизайн</p>
-               </div>
-            </li>
-            <li class="projects__item" tabindex="0">
-               <div class="projects__img"><img class="projects__photo" src="./images/imgportfolio8.jpg" alt="" />
-                  <div class="projects__overlay">
-                     <p class="projects__overlay-text">LAB это современная площадка распространения коронавируса. Компании
-                        используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-                  </div>
-               </div>
-               <div class="projects__block">
-                  <h2 class="projects__caption">Проект LAB</h2>
-                  <p class="projects__text">Маркетинг</p>
-               </div>
-            </li>
-            <li class="projects__item" tabindex="0">
-               <div class="projects__img"><img class="projects__photo" src="./images/imgportfolio9.jpg" alt="" />
-                  <div class="projects__overlay">
-                     <p class="projects__overlay-text">Growing Business это современная площадка распространения
-                        коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера
-                        конкурентов.</p>
-                  </div>
-               </div>
-               <div class="projects__block">
-                  <h2 class="projects__caption">Growing Business</h2>
-                  <p class="projects__text">Приложение</p>
-               </div>
-            </li>
-         </ul>
-      </div>
-   </section>
-   <!-- /Каточки "Проекты"-->
-   
-   </main>
-   <!-- /Главниый раздел -->
-
-      <!-- Подвал этой страницы -->
-      <footer class="footer">
-         <div class="container footer__container">
-            <div class="footer__align">
-               <div class="footer__logo-address">
-                  <div class="logo footer__logo">
-                     <a href="./index.html" class="logo__link"><span class="footer__logo--blue">Web</span><span
-                           class="footer__logo--white">Studio</span></a>
-                  </div>
-                  <address class="address">
-                     <ul class="address__list">
-                        <li class="address__item">
-                           <p class="address__text address__text--white">г. Киев, пр-т Леси Украинки, 26</p>
-                        </li>
-                        <li class="address__item">
-                           <a href="mailto:info@example.com" class="address__text address__text--grey">info@example.com</a>
-                        </li>
-                        <li class="address__item">
-                           <a href="tel:+380991111111" class="address__text address__text--grey">+38 099 111 11 11</a>
-                        </li>
-                     </ul>
-                  </address>
-               </div>
-               <div class="social social__footer">
-                  <p class="social__caption">присоединяйтесь</p>
-                  <ul class="social__list">
-                     <li class="social__item">
-                        <a class="social__link" href="">
-                           <svg class="social__icon social__icon--white">
-                              <use href="./icons/symbol-defs.svg#icon-instagram"></use>
-                           </svg>
-                        </a>
-                     </li>
-                     <li class="social__item">
-                        <a class="social__link" href="">
-                           <svg class="social__icon social__icon--white">
-                              <use href="./icons/symbol-defs.svg#icon-twitter"></use>
-                           </svg>
-                        </a>
-                     </li>
-                     <li class="social__item">
-                        <a class="social__link" href="">
-                           <svg class="social__icon social__icon--white">
-                              <use href="./icons/symbol-defs.svg#icon-facebook"></use>
-                           </svg>
-                        </a>
-                     </li>
-                     <li class="social__item">
-                        <a class="social__link" href="">
-                           <svg class="social__icon social__icon--white">
-                              <use href="./icons/symbol-defs.svg#icon-linkedin"></use>
-                           </svg>
-                        </a>
-                     </li>
-                  </ul>
-               </div>
+    <!-- Подвал этой страницы -->
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__align">
+          <div class="footer__logo-address">
+            <div class="logo footer__logo">
+              <a href="./index.html" class="logo__link"
+                ><span class="footer__logo--blue">Web</span
+                ><span class="footer__logo--white">Studio</span></a
+              >
             </div>
-            <div class="subscribe">
-               <p class="subscribe__caption">Подпишитесь на рассылку</p>
-               <form action="#" autocomplete="off">
-                  <input class="subscribe__input" type="text" placeholder="E-mail" name="email">
-                  <button class="subscribe__button">Подписаться<svg class="subscribe__icon">
-                        <use href="../icons/symbol-defs.svg#icon-send"></use>
-                     </svg>
-                  </button>
-               </form>
-      
-            </div>
-         </div>
-      </footer>
-      <!-- /Подвал этой страницы -->
-  
-</body>
-
+            <address class="address">
+              <ul class="address__list">
+                <li class="address__item">
+                  <p class="address__text address__text--white">
+                    г. Киев, пр-т Леси Украинки, 26
+                  </p>
+                </li>
+                <li class="address__item">
+                  <a
+                    href="mailto:info@example.com"
+                    class="address__text address__text--grey"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a
+                    href="tel:+380991111111"
+                    class="address__text address__text--grey"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="social social__footer">
+            <p class="social__caption">присоединяйтесь</p>
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link" href="">
+                  <svg class="social__icon social__icon--white">
+                    <use href="./icons/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="">
+                  <svg class="social__icon social__icon--white">
+                    <use href="./icons/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="">
+                  <svg class="social__icon social__icon--white">
+                    <use href="./icons/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="">
+                  <svg class="social__icon social__icon--white">
+                    <use href="./icons/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="subscribe">
+          <p class="subscribe__caption">Подпишитесь на рассылку</p>
+          <form action="#" autocomplete="off">
+            <input
+              class="subscribe__input"
+              type="text"
+              placeholder="E-mail"
+              name="email"
+            />
+            <button class="subscribe__button">
+              Подписаться<svg class="subscribe__icon">
+                <use href="../icons/symbol-defs.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <!-- /Подвал этой страницы -->
+    <script src="./js/menu.js"></script>
+  </body>
 </html>

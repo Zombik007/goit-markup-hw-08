@@ -1,24 +1,23 @@
 /* Добавлется стиль для контейнера */
 .container {
-  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-}
 
-@media (min-width: 767px) {
-  .container {
-    max-width: 768px;
+  @media screen and (min-width: 480px) {
+    width: $width-mobile;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: $width-tablet;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: $width-desktop;
   }
 }
 
-@media (min-width: 1023px) {
-  .container {
-    max-width: 1200px;
-    padding: 0 15px;
-  }
-}
 /* Стили для "невидимых" заголовков */
 .visually-hidden {
   position: absolute;

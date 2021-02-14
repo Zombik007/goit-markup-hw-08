@@ -4,12 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoIt first homework</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css"
-        integrity="sha512-Zx6MlUMKSVJoQ+83OwhdILe8cSEsCzfqThJd7J/VA2UrK6Ctj85p+xzqfyuNXE5B1k25uUdmJ2OzItbBy9GHAQ=="
-        crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" />
     <link rel="stylesheet" href="./css/main.min.css" />
 </head>
 <body>
@@ -20,36 +14,50 @@
     <!-- Шапка сайта -->
     <header class="page-header">
         <div class="container page-header__container">
-            <div class="logo">
-                <a href="./index.html" class="logo__link">
-                    <span class="page-header__logo--blue">Web</span><span class="page-header__logo--black">Studio</span>
-                </a>
-            </div>
-            <div class="page-header__menu">
-                <div class="page-header__btn-close">
-                    <ul class="page-hader__list-pages">
-                        <li class="page-header__item-pages"><a href="./index.html" class="page-header__link page-header__link--current">Студия</a></li>
-                        <li class="page-header__item-pages"><a href="./portfolio.html" class="page-header__link">Портфолио</a></li>
-                        <li class="page-header__item-pages"><a href="#" class="page-header__link">Контакты</a></li>
-                    </ul>
-                    <ul class="page-header__list-contacts">
-                        <li class="page-header__item-tel"><a class="page-header__contacts--tel" href="tel:+380961111111">
-                            <svg class="page-header__contacts--smartphone page-header__contacts--icon">
-                                <use href="./icons/symbol-defs.svg#icon-smartphone"></use>
-                            </svg>+38 099 111 11 11</a></li>
-                        <li class="page-header__item-mail"><a class="page-header__contacts--mail" href="mailto:info@devstudio.com">
-                            <svg class="page-header__contacts--envelope page-header__contacts--icon">
-                                <use href="./icons/symbol-defs.svg#icon-envelope"></use>
-                            </svg>info@devstudio.com</a></li>
-                    </ul>
-                    <ul class="page-header__list-social">
-                        <li class="page-header__item-social">Instagram</li>
-                        <li class="page-header__item-social">Twitter</li>
-                        <li class="page-header__item-social">Facebook</li>
-                        <li class="page-header__item-social">LinkedIn</li>
-                    </ul>
+            <nav class="page-header__nav">
+                <div class="logo">
+                    <a href="./index.html" class="logo__link">
+                        <span class="page-header__logo--blue">Web</span><span class="page-header__logo--black">Studio</span>
+                    </a>
                 </div>
-            </div>
+                <button 
+                    class="page-header__menu-btn" 
+                    type="button" 
+                    aria-expanded="false" 
+                    aria-controls="page-header__menu" 
+                    data-menu-button
+                >
+                    <svg width="40px" height="40px">
+                        <use class="page-header__menu-close" href="./icons/symbol-defs.svg#icon-close-menu"></use>
+                        <use class="page-header__menu-humburger" href="./icons/symbol-defs.svg#icon-humburger-menu"></use>
+                    </svg>
+                </button>
+
+                <div class="page-header__menu" id="page-header__menu" data-menu>
+                        <ul class="page-hader__list-pages"> 
+                            <li class="page-header__item-pages"><a href="./index.html" class="page-header__link page-header__link--current">Студия</a></li>
+                            <li class="page-header__item-pages"><a href="./portfolio.html" class="page-header__link">Портфолио</a></li>
+                            <li class="page-header__item-pages"><a href="#" class="page-header__link">Контакты</a></li>
+                        </ul>
+                        <ul class="page-header__list-contacts">
+                            <li class="page-header__item-contacts"><a class="page-header__contacts-link page-header__contacts--tel" href="tel:+380961111111">
+                                <svg class="page-header__contacts--smartphone page-header__contacts--icon">
+                                    <use href="./icons/symbol-defs.svg#icon-smartphone"></use>
+                                </svg>+38 096 111 11 11</a></li>
+                            <li class="page-header__item-contacts"><a class="page-header__contacts-link page-header__contacts--mail" href="mailto:info@devstudio.com">
+                                <svg class="page-header__contacts--envelope page-header__contacts--icon">
+                                    <use href="./icons/symbol-defs.svg#icon-envelope"></use>
+                                </svg>info@devstudio.com</a></li>
+                        </ul>
+                        <ul class="page-header__list-social">
+                            <li class="page-header__item-social"><a href="" class="page-header__link-social" aria-label="instagram">Instagram</a></li>
+                            <li class="page-header__item-social"><a href="" class="page-header__link-social" aria-label="twitter">Twitter</a></li>
+                            <li class="page-header__item-social"><a href="" class="page-header__link-social" aria-label="facebook">Facebook</a></li>
+                            <li class="page-header__item-social"><a href="" class="page-header__link-social" aria-label="linkedin">LinkedIn</a></li>
+                        </ul>
+                    <!-- </div> -->
+                </div>
+            </nav>
         </div>
     </header>
     <!-- /Шапка сайта -->
@@ -119,19 +127,28 @@
             <h2 class="occupation__caption">Чем мы занимаемся</h2>
             <ul class="occupation__list">
                 <li class="occupation__item">
-                    <img class="occupation__img" src="./images/png1.jpg"
-                        alt="крупный план, программист работает за столом в офисе" width="370" />
+                    <img 
+                    class="occupation__img" 
+                    src="./images/img1.jpg"
+                    srcset="./images/img1@2x.jpg 2x"
+                    alt="крупный план, программист работает за столом в офисе" width="370" />
                     <p class="occupation__text">Десктопные приложения</p>
                 </li>
                 <li class="occupation__item">
-                    <img class="occupation__img" src="./images/png2.jpg"
-                        alt="веб-дизайнеры пользовательского интерфейса разрабатывают приложения для смартфонов"
-                        width="370" />
+                    <img 
+                    class="occupation__img" 
+                    src="./images/img2.jpg"
+                    srcset="./images/img2@2x.jpg 2x"
+                    alt="веб-дизайнеры пользовательского интерфейса разрабатывают приложения для смартфонов"
+                    width="370" />
                     <p class="occupation__text">Мобильные приложения</p>
                 </li>
                 <li class="occupation__item">
-                    <img class="occupation__img" src="./images/png3.jpg"
-                        alt="художник, веб-дизайнер с открытым приложением на планшете для выбора цветов" width="370" />
+                    <img 
+                    class="occupation__img" 
+                    src="./images/img3.jpg"
+                    srcset="./images/img3@2x.jpg 2x"
+                    alt="художник, веб-дизайнер с открытым приложением на планшете для выбора цветов" width="370" />
                     <p class="occupation__text">Дизайнерские решения</p>
                 </li>
             </ul>
@@ -145,9 +162,34 @@
             <h2 class="team__caption">Наша команда</h2>
             <ul class="team__list">
                 <li class="team__item">
-                    <img class="team__img" src="./images/img1.jpg"
-                alt="Игорь Демьяненко"
-                width="450">
+                    <picture>
+                  <source
+                    srcset="
+                      ./images/team/img-igor-demyanenko-mobile.jpg,
+                      ./images/team/img-igor-demyanenko-mobile@2x.jpg
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/img-igor-demyanenko-tablet.jpg,
+                      ./images/team/img-igor-demyanenko-tablet@2x.jpg
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/img-igor-demyanenko.jpg,
+                      ./images/team/img-igor-demyanenko@2x.jpg
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="team__img"
+                    src="./images/team/img-igor-demyanenko-mobile.jpg"
+                    alt="фото-портрет Игоря Демьяненко"
+                  />
+                </picture>
                     <div class="team__text">
                         <h2 class="team__text-caption">Игорь Демьяненко</h2>
                         <p class="team__proffession">Product Designer</p>
@@ -186,9 +228,34 @@
                     </div>
                 </li>
                 <li class="team__item">
-                    <img class="team__img" src="./images/img2.jpg"
-                alt="Ольга Репина"
-                width="450">
+                    <picture>
+                  <source
+                    srcset="
+                      ./images/team/img-olga-repina-mobile.jpg,
+                      ./images/team/img-olga-repina-mobile@2x.jpg
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/img-olga-repina-tablet.jpg,
+                      ./images/team/img-olga-repina-tablet@2x.jpg
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/img-olga-repina.jpg,
+                      ./images/team/img-olga-repina@2x.jpg
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="team__img"
+                    src="./images/team/img-olga-repina-mobile.jpg"
+                    alt="фото-портрет Ольги Репиной"
+                  />
+                </picture>
                     <div class="team__text">
                         <h2 class="team__text-caption">Ольга Репина</h2>
                         <p class="team__proffesion">Frontend Developer</p>
@@ -227,9 +294,34 @@
                     </div>
                 </li>
                 <li class="team__item">
-                    <img class="team__img" src="./images/img3.jpg"
-                alt="Николай Тарасов"
-                width="450">
+                    <picture>
+                  <source
+                    srcset="
+                      ./images/team/img-nikolay-tarasov-mobile.jpg,
+                      ./images/team/img-nikolay-tarasov@2x.jpg
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/img-nikolay-tarasov-tablet.jpg,
+                      ./images/team/img-nikolay-tarasov-tablet@2x.jpg
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/img-nikolay-tarasov.jpg,
+                      ./images/team/img-nikolay-tarasov@2x.jpg
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="team__img"
+                    src="./images/team/img-nikolay-tarasov-mobile.jpg"
+                    alt="фото-портрет Николая Тарасова"
+                  />
+                </picture>
                     <div class="team__text">
                         <h2 class="team__text-caption">Николай Тарасов</h2>
                         <p class="team__proffesion">Marketing</p>
@@ -268,9 +360,34 @@
                     </div>
                 </li>
                 <li class="team__item">
-                    <img class="team__img" src="./images/img4.jpg"
-                alt="Михаил Ермаков"
-                width="450">
+                    <picture>
+                  <source
+                    srcset="
+                      ./images/team/img-mihail-ermakov-mobile.jpg,
+                      ./images/team/img-mihail-ermakov@2x.jpg
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/img-mihail-ermakov-tablet.jpg,
+                      ./images/team/img-mihail-ermakov-tablet@2x.jpg
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/img-mihail-ermakov.jpg,
+                      ./images/team/img-mihail-ermakov@2x.jpg
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="team__img"
+                    src="./images/team/img-mihail-ermakov-mobile.jpg"
+                    alt="фото-портрет Михаила Ермакова"
+                  />
+                </picture>
                     <div class="team__text">
                         <h2 class="team__text-caption">Михаил Ермаков</h2>
                         <p class="team__proffesion">UI Designer</p>
@@ -425,8 +542,8 @@
                 </div>
             </div>
             <div class="subscribe">
-                <p class="subscribe__caption">Подпишитесь на рассылку</p>
-                <form action="#" autocomplete="off">
+                <form  class="subscribe__form" action="#" autocomplete="off">
+                    <p class="subscribe__caption">Подпишитесь на рассылку</p>
                     <input class="subscribe__input" type="text" placeholder="E-mail" name="email">
                     <button class="subscribe__button">Подписаться<svg class="subscribe__icon">
                             <use href="../icons/symbol-defs.svg#icon-send"></use>
@@ -509,5 +626,6 @@
     </div>
     <!-- /Модальное окно -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
