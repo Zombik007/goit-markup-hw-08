@@ -28,8 +28,10 @@
   line-height: 1.71em;
   letter-spacing: 0.03em;
 
-  color: #757575;
-  // transition: color $time-transition $function-bezire;
+  color: $main-text-color;
+  transition-property: color;
+  transition-duration: $animation-duration;
+  transition-timing-function: $animation-type;
 
   &:hover,
   &:focus {

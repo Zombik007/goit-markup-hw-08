@@ -1,4 +1,3 @@
-/* Задаются внутрение отступы и цвет фона карточек раздела "Наша команда" */
 .team {
   background-color: #f5f4fa;
   padding-top: 60px;
@@ -9,7 +8,6 @@
     padding-bottom: 94px;
   }
 
-  /* Стили заголовков раздела "Наша команда" */
   &__caption {
     font-size: 28px;
     line-height: 1.18em;
@@ -24,7 +22,6 @@
     }
   }
 
-  /* Задается внутрений отступ, нижнее скругление и цвет фона карточек "Наша команда" */
   &__item {
     background-color: $color-white;
     padding-bottom: 24px;
@@ -53,22 +50,17 @@
     margin-bottom: 30px;
   }
 
-  /* Нижний внешний отступ для изображения раздела "Наша команда"  */
   &__img {
     margin-bottom: 30px;
   }
 
-  /* Стили заголовков карточек раздела "Наша команда" */
   &__text-caption {
     font-weight: 500;
     font-size: 16px;
-    // line-height: 1.19em;
-    // text-align: center;
     color: $text-caption-color;
     margin-bottom: 10px;
   }
 
-  /* Стили текста карточек раздела "Наша команда" */
   &__text {
     font-weight: 400;
     font-size: 16px;
@@ -122,10 +114,6 @@
       margin-right: 30px;
       margin-bottom: 0;
     }
-
-    // &__item:not(:nth-child(2n)) {
-    //   margin-right: 0;
-    // }
 
     &__item:nth-child(3) {
       margin-bottom: 0;

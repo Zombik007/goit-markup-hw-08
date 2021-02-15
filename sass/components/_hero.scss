@@ -1,11 +1,8 @@
-/* Стили главного раздела страницы "Студия" */
-/* Фоновый цвет секции "Герой" */
 .hero {
   padding: 0;
   text-align: center;
   background: #c4c4c4;
 
-  /* Фон секции "Герой" */
   &__overlay {
     min-width: 320px;
     max-width: 1600px;
@@ -51,7 +48,6 @@
     }
   }
 
-  /* Cтили для главного заголовка */
   &__caption {
     font-weight: 900;
     font-size: 26px;
@@ -73,7 +69,6 @@
     }
   }
 
-  /* Стили кнопки секции "Герой" */
   &__button {
     font-weight: 700;
     line-height: 1.875em;

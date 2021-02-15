@@ -5,9 +5,6 @@
   letter-spacing: 0.03em;
 }
 
-/* Общие стили для Logo */
-
-/* Цвет частички Web на Logo */
 .page-header__logo--blue,
 .footer__logo--blue {
   color: $accent-color;
@@ -16,7 +13,6 @@
   }
 }
 
-/* Цвет частички Studio на Logo */
 .page-header__logo--black {
   color: #000;
 
@@ -30,25 +26,11 @@
   }
 }
 
-/*  Внешний отступ блока логотипа от ссылок социальных сетей  */
 .footer__logo {
   margin-bottom: 20px;
   text-align: center;
-  // margin-right: auto;
-  // margin-left: auto;
 }
 
-// .footer__logo {
-//   margin: 0;
-//   margin-bottom: 20px;
-//   display: block;
-
-//   font-size: 24px;
-//   line-height: 28px;
-//   letter-spacing: 0.03em;
-// }
-
-/* Стили логотипа подвала */
 .footer__logo--white {
   color: $color-white;
 }

@@ -372,7 +372,6 @@ li {
   list-style: none;
 }
 
-/* Добавлется стиль для контейнера */
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -398,7 +397,6 @@ li {
   }
 }
 
-/* Стили для "невидимых" заголовков */
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -407,7 +405,6 @@ li {
   margin: -1px;
 }
 
-/* Стиль нижней границы для хедера */
 .page-header {
   border-bottom: 1px solid #ececec;
 }
@@ -423,7 +420,6 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /*justify-content: space-between;*/
   min-height: 60px;
 }
 
@@ -543,6 +539,12 @@ li {
   line-height: 1.175;
   letter-spacing: 0.02em;
   color: #212121;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-header__link:hover, .page-header__link:focus {
@@ -595,6 +597,12 @@ li {
   line-height: 1.14em;
   letter-spacing: 0.02em;
   color: #757575;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -724,8 +732,6 @@ li {
   letter-spacing: 0.03em;
 }
 
-/* Общие стили для Logo */
-/* Цвет частички Web на Logo */
 .page-header__logo--blue,
 .footer__logo--blue {
   color: #2196f3;
@@ -738,7 +744,6 @@ li {
   }
 }
 
-/* Цвет частички Studio на Logo */
 .page-header__logo--black {
   color: #000;
 }
@@ -756,13 +761,11 @@ li {
   }
 }
 
-/*  Внешний отступ блока логотипа от ссылок социальных сетей  */
 .footer__logo {
   margin-bottom: 20px;
   text-align: center;
 }
 
-/* Стили логотипа подвала */
 .footer__logo--white {
   color: #fff;
 }
@@ -779,15 +782,10 @@ li {
   }
 }
 
-/* Стили главного раздела страницы "Студия" */
-/* Фоновый цвет секции "Герой" */
 .hero {
   padding: 0;
   text-align: center;
   background: #c4c4c4;
-  /* Фон секции "Герой" */
-  /* Cтили для главного заголовка */
-  /* Стили кнопки секции "Герой" */
 }
 
 .hero__overlay {
@@ -917,11 +915,6 @@ li {
     max-width: 528px;
     height: 581px;
   }
-}
-
-.modal {
-  /* Стиль кнопки закрытия модального окна */
-  /* Стиль иконки кнопки закрытия модального окна */
 }
 
 .modal__caption {
@@ -1135,16 +1128,9 @@ li {
   }
 }
 
-/* Внутрение отступы секции "Особенности" */
 .advantages {
   padding-top: 60px;
   padding-bottom: 60px;
-  /* Задается свойство Flex элементам раздела "Особенности" */
-  /* Превращает элементы списка раздела "Особенности" в строчно-блочные */
-  /* Задаются фоновые изображения элементам списка раздела "Особенности" */
-  /* Задаются икнонки фоновым изображениям элементов списка раздела "Особенности" */
-  /* Стили заголовков раздела "Особенности" */
-  /* Стили текста раздела "Особенности" */
 }
 
 @media screen and (min-width: 1200px) {
@@ -1259,7 +1245,6 @@ li {
   }
 }
 
-/* Верхний внутрений отступ раздела "Чем мы занимаемся" */
 .occupation {
   display: none;
   padding-top: 94px;
@@ -1276,7 +1261,6 @@ li {
   margin-right: 30px;
 }
 
-/* Стили заголовка раздела "Чем мы занимаемся" */
 .occupation__caption {
   font-size: 36px;
   line-height: 1.17em;
@@ -1291,19 +1275,16 @@ li {
   display: flex;
 }
 
-/* Превращает элементы списка раздела "Чем мы занимаемся" в строчно-блочные */
 .occupation__item {
   display: inline-block;
   position: relative;
   max-width: 370px;
 }
 
-/* Задаются отступы элементам списка раздела "Чем мы занимаемся" кроме последнего */
 .occupation__list > .occupation__item:not(:last-child) {
   margin-right: 30px;
 }
 
-/* Задаются стили текста раздела "Чем мы занимаемся" */
 .occupation__text {
   position: absolute;
   font-size: 14px;
@@ -1345,6 +1326,12 @@ li {
   line-height: 1.71em;
   letter-spacing: 0.03em;
   color: #757575;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address__text:hover, .address__text:focus {
@@ -1353,14 +1340,6 @@ li {
 
 .address__text--white {
   color: #fff;
-}
-
-.social {
-  /* Задается свойство Flex элементам списка социальных сетей команды */
-  /* Задаются отступы элементам списка социальных сетей команды кроме последнего */
-  /* Придается вид элементам списка социальных сетей команды */
-  /* Цвет иконок социальных сетей команды при наведении */
-  /* Задаются размеры ссылок социальных сетей подвала страницы */
 }
 
 .social__list {
@@ -1437,16 +1416,10 @@ li {
   }
 }
 
-/* Задаются внутрение отступы и цвет фона карточек раздела "Наша команда" */
 .team {
   background-color: #f5f4fa;
   padding-top: 60px;
   padding-bottom: 60px;
-  /* Стили заголовков раздела "Наша команда" */
-  /* Задается внутрений отступ, нижнее скругление и цвет фона карточек "Наша команда" */
-  /* Нижний внешний отступ для изображения раздела "Наша команда"  */
-  /* Стили заголовков карточек раздела "Наша команда" */
-  /* Стили текста карточек раздела "Наша команда" */
 }
 
 @media screen and (min-width: 1200px) {
@@ -1670,6 +1643,14 @@ li {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers__link:hover, .customers__link:focus {
@@ -1683,7 +1664,6 @@ li {
   }
 }
 
-/* Задаются размеры иконок раздела "Партнеры" */
 .customers__icon {
   width: 100%;
   height: 55%;
@@ -1885,14 +1865,6 @@ li {
   }
 }
 
-.filter {
-  /* Выравнивание кнопок по центру */
-  /* Превращает элементы списка кнопок "Фильтры" в строчно-блочные для разменщения в одну линию */
-  /* Задается внешний отступ справа элементам списка кнопок "Фильтры" кроме последнего */
-  /* Стили кнопок фильтра */
-  /* Стили кнопок при наведении */
-}
-
 .filter__list {
   margin-bottom: 40px;
 }
@@ -1952,17 +1924,6 @@ li {
   }
 }
 
-.projects {
-  /* Размещаются элементы карточек "Проекты" по три в ряд */
-  /* Задается нижний внешний отступ для изображения в карточках "Проекты" */
-  /* Блок который появляется над картинкой в карточках "Проекты" */
-  /* Эффекты блока который появляется над картинкой в карточках "Проекты" */
-  /* Стили текста блока который появляется над картинкой в карточках "Проекты" */
-  /* Внутрение отступы в карточках "Проекты" */
-  /* Стили заголовков карточек на странице "Портфолио" */
-  /* Стили текста карточек на странице "Портфолио" */
-}
-
 .projects__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1976,6 +1937,14 @@ li {
 
 .projects__item {
   margin-bottom: 30px;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects__item:last-child {
@@ -1996,6 +1965,7 @@ li {
     -ms-flex-preferred-size: calc((100% - 2 * 30px) / 3);
         flex-basis: calc((100% - 2 * 30px) / 3);
     margin-right: 30px;
+    background-color: #fff;
   }
   .projects__item:nth-child(3n) {
     margin-right: 0;

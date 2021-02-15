@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  /* Размещаются элементы карточек "Проекты" по три в ряд */
+
   &__item {
     margin-bottom: 30px;
     &:last-child {
@@ -22,7 +22,7 @@
       flex-basis: calc((100% - 2 * 30px) / 3);
       margin-right: 30px;
 
-      // background-color: $primary-bg-color;
+      background-color: $color-white;
 
       &:nth-child(3n) {
         margin-right: 0;
@@ -38,18 +38,16 @@
           0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
       }
     }
-    // transition-property: box-shadow;
-    // transition-duration: $animation-duration;
-    // transition-timing-function: $animation-type;
+    transition-property: box-shadow;
+    transition-duration: $animation-duration;
+    transition-timing-function: $animation-type;
   }
 
-  /* Задается нижний внешний отступ для изображения в карточках "Проекты" */
   &__img {
     position: relative;
     overflow: hidden;
   }
 
-  /* Блок который появляется над картинкой в карточках "Проекты" */
   &__overlay {
     position: absolute;
     width: calc(100% + 2px);
@@ -65,13 +63,11 @@
     transition-timing-function: $animation-type;
   }
 
-  /* Эффекты блока который появляется над картинкой в карточках "Проекты" */
   &__item:hover &__overlay,
   &__item:focus &__overlay {
     transform: translateY(0);
   }
 
-  /* Стили текста блока который появляется над картинкой в карточках "Проекты" */
   &__overlay-text {
     font-size: 18px;
     font-weight: 400;
@@ -79,7 +75,6 @@
     color: $color-white;
   }
 
-  /* Внутрение отступы в карточках "Проекты" */
   &__block {
     display: inline-block;
     padding-top: 20px;
@@ -89,7 +84,6 @@
     max-width: 370px;
   }
 
-  /* Стили заголовков карточек на странице "Портфолио" */
   &__caption {
     font-size: 18px;
     line-height: 2em;
@@ -98,7 +92,6 @@
     margin-bottom: 4px;
   }
 
-  /* Стили текста карточек на странице "Портфолио" */
   &__text {
     font-weight: 400;
     line-height: 1.875em;
@@ -136,10 +129,6 @@
     &__item:not(:nth-child(2n)) {
       margin-right: 30px;
     }
-
-    // &__item:nth-child(3) {
-    //   margin-bottom: 0;
-    // }
 
     &__img {
       max-width: 354px;

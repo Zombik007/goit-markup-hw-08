@@ -1,4 +1,3 @@
-/* Стиль нижней границы для хедера */
 .page-header {
   border-bottom: 1px solid #ececec;
 }
@@ -7,11 +6,9 @@
   position: relative;
 }
 
-//Navigation
 .page-header__nav {
   display: flex;
   align-items: center;
-  /*justify-content: space-between;*/
   min-height: 60px;
 }
 
@@ -95,18 +92,6 @@
       margin-right: 50px;
     }
   }
-  // @media screen and (min-width: 768px) {
-  //   display: flex;
-  //   margin-right: 84px;
-
-  //   &__item-pages {
-  //     margin-right: 50px;
-  //   }
-
-  //   &__item-pages:last-child {
-  //     margin-right: 0;
-  //   }
-  // }
 }
 
 .page-header__item-pages {
@@ -128,8 +113,10 @@
   line-height: 1.175;
   letter-spacing: 0.02em;
 
-  color: #212121;
-  // transition: color $time-transition $function-bezire;
+  color: $text-caption-color;
+  transition-property: color;
+  transition-duration: $animation-duration;
+  transition-timing-function: $animation-type;
 
   &:hover,
   &:focus {
@@ -144,7 +131,6 @@
   }
 }
 
-//Current
 .page-header__link--current {
   color: $accent-color;
 
@@ -166,7 +152,6 @@
   }
 }
 
-//Contacts
 .page-header__list-contacts {
   padding: 0;
 
@@ -183,8 +168,10 @@
     line-height: 1.14em;
     letter-spacing: 0.02em;
 
-    color: #757575;
-    // transition: color $time-transition $function-bezire;
+    color: $main-text-color;
+    transition-property: color;
+    transition-duration: $animation-duration;
+    transition-timing-function: $animation-type;
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       font-size: 12px;
@@ -268,7 +255,6 @@
   }
 }
 
-// 165465
 .page-header__list-social {
   display: flex;
 
