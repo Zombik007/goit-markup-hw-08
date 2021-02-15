@@ -4,10 +4,10 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  // /* Задается свойство Flex элементам раздела "Наша команда" */
-  // .team__list {
-  //   display: flex;
-  // }
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   /* Стили заголовков раздела "Наша команда" */
   &__caption {
@@ -16,6 +16,12 @@
     text-align: center;
     color: $text-caption-color;
     margin-bottom: 30px;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+
+      font-size: 36px;
+    }
   }
 
   /* Задается внутрений отступ, нижнее скругление и цвет фона карточек "Наша команда" */
@@ -26,12 +32,26 @@
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    @media screen and (min-width: 768px) {
+      max-width: 354px;
+      &__item:nth-child(3) {
+        margin-bottom: 0;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      max-width: 270px;
+
+      &__item:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
   }
 
-  // /* Задаются отступы элементам списка раздела "Наша команда" кроме последнего */
-  // .team__list > .team__item:not(:last-child) {
-  //   margin-right: 30px;
-  // }
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 
   /* Нижний внешний отступ для изображения раздела "Наша команда"  */
   &__img {
@@ -56,47 +76,6 @@
     text-align: center;
     margin-bottom: 16px;
   }
-
-  // /* Задается свойство Flex элементам списка социальных сетей команды */
-  // .team__social-list {
-  //   display: flex;
-  //   justify-content: center;
-  //   padding-top: 16px;
-  // }
-
-  // /* Задаются отступы элементам списка социальных сетей команды кроме последнего */
-  // .team__social-list > .team__social-item:not(:last-child) {
-  //   margin-right: 10px;
-  // }
-
-  // /* Придается вид элементам списка социальных сетей команды */
-  // .team__social-link {
-  //   display: inline-flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   background-color: rgba(255, 255, 255, 0.1);
-  //   width: 44px;
-  //   height: 44px;
-  //   border-radius: 50%;
-  //   color: #afb1b8;
-  //   transition-property: background-color color;
-  //   transition-duration: $animation-duration;
-  //   transition-timing-function: $animation-type;
-  // }
-
-  // /* Цвет иконок социальных сетей команды при наведении */
-  // .team__social-link:hover,
-  // .team__social-link:focus {
-  //   background-color: $accent-color;
-  //   color: $color-white;
-  // }
-
-  // /* Задаются размеры ссылок социальных сетей подвала страницы */
-  // .team__social-icon {
-  //   width: 20px;
-  //   height: 20px;
-  //   fill: currentColor;
-  // }
 
   @media (min-width: 767px) {
     &__list {

@@ -1,4 +1,3 @@
-/* Внутрение отступы раздела "Партнеры" */
 .customers {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -7,29 +6,32 @@
     padding-top: 94px;
     padding-bottom: 94px;
   }
+}
 
-  /* Текст раздела "Партнеры" */
-  &__caption {
-    font-size: 28px;
-    line-height: 1.18em;
-    text-align: center;
-    color: $text-caption-color;
-    margin-bottom: 30px;
-    @media screen and (min-width: 1200px) {
-      margin-bottom: 50px;
+.customers__caption {
+  margin-top: 0;
+  margin-bottom: 30px;
 
-      // font-size: $font-size-tittle;
-    }
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17em;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
   }
+}
 
-  /* Текст раздела "Партнеры" */
-  &__list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+.customers__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-  &__item {
+  &-item {
     flex-basis: calc(100% / 2 - 15px);
 
     @media screen and (min-width: 768px) {
@@ -42,130 +44,50 @@
   }
 
   @media screen and (max-width: 767px) {
-    &__item:nth-child(2n + 1) {
+    &-item:nth-child(2n + 1) {
       margin-right: 30px;
     }
 
-    &__item:nth-child(-n + 4) {
+    &-item:nth-child(-n + 4) {
       margin-bottom: 30px;
     }
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    &__item:nth-child(-n + 3) {
+    &-item:nth-child(-n + 3) {
       margin-bottom: 30px;
     }
-
-    &__item:not(:nth-child(3n + 3)) {
-      margin-right: 30px;
-    }
-  }
-
-  /* Задаются размеры ссылок раздела "Партнеры" */
-  &__link {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    color: #afb1b8;
-    border: 1px solid #afb1b8;
-    border-radius: 4px;
-    min-width: 208px;
-    height: 90px;
-    transition-property: border-color color;
-    transition-duration: $animation-duration;
-    transition-timing-function: $animation-type;
-
-    &:hover,
-    &:focus {
-      fill: $accent-color;
-      border-color: $accent-color;
-    }
-
-    @media screen and (min-width: 1200px) {
-      width: 170px;
-    }
-  }
-
-  /* Задаются размеры иконок раздела "Партнеры" */
-  &__icon {
-    width: 100%;
-    height: 55%;
-    fill: currentColor;
   }
 }
 
-//   @media (min-width: 767px) {
-//     &__list {
-//       display: flex;
-//       justify-content: center;
-//       flex-wrap: wrap;
-//     }
+.customers__link {
+  height: 90px;
 
-//     &__item {
-//       width: 354px;
-//       flex-basis: calc(100% / 4 - 10px);
-//     }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 
-//     &__item:not(:last-child) {
-//       margin-bottom: 30px;
-//     }
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
 
-//     &__item:not(:nth-child(3n)) {
-//       margin-right: 30px;
-//     }
+  // transition: border-color $time-transition $function-bezire,
+  // fill $time-transition $function-bezire;
 
-//     &__item:nth-child(3) {
-//       margin-right: 0;
-//     }
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    border-color: $accent-color;
+  }
 
-//     &__item:nth-child(n + 4) {
-//       margin-bottom: 0;
-//     }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
+}
 
-//     &__img {
-//       max-width: 354px;
-//     }
-
-//     &__link {
-//       min-width: 226px;
-//     }
-//   }
-
-//   @media (min-width: 1023px) {
-//     &__list {
-//       display: flex;
-//       justify-content: center;
-//       flex-wrap: nowrap;
-//     }
-
-//     &__item {
-//       width: 170px;
-//       flex-basis: calc(100% / 6);
-//     }
-
-//     &__item:not(:last-child) {
-//       margin-bottom: 0;
-//     }
-
-//     // &__item:not(:nth-child(3n)) {
-//     //   margin-right: 30px;
-//     // }
-
-//     &__item:nth-child(3) {
-//       margin-right: 30px;
-//     }
-
-//     // &__item:nth-child(n + 4) {
-//     //   margin-bottom: 0;
-//     // }
-
-//     &__img {
-//       min-width: 170px;
-//     }
-
-//     &__link {
-//       min-width: 170px;
-//     }
-//   }
-// }
+/* Задаются размеры иконок раздела "Партнеры" */
+.customers__icon {
+  width: 100%;
+  height: 55%;
+}
