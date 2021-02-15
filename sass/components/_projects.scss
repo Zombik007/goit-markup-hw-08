@@ -16,6 +16,12 @@
       flex-basis: calc(100% / 2 - 15px);
     }
 
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      max-width: 354px;
+      flex-basis: calc(100% / 2 - 15px);
+    }
+  
+
     @media screen and (min-width: 1200px) {
       max-width: 370px;
 
@@ -139,7 +145,7 @@
     }
   }
 
-  @media (min-width: 1023px) {
+  @media (min-width: 1200px) {
     &__list {
       display: flex;
       justify-content: center;

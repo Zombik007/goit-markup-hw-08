@@ -64,7 +64,7 @@
 
     @media screen and (min-width: 1200px) {
       font-size: 44px;
-      line-height: 1.36;
+      line-height: 1.36em;
       width: 696px;
     }
   }
@@ -84,7 +84,7 @@
     padding: 10px 32px;
   }
 
-  @media (min-width: 1023px) {
+  @media (min-width: 1200px) {
     &__caption {
       font-size: 44px;
       max-width: 696px;
